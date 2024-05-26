@@ -1,8 +1,9 @@
 const mongoose = require("mongoose")
 const Books = require("../models/books")
 
-const getPosts = async (req, res) => {
+const getBooks = async (req, res) => {
   try {
+    console.log("Getting all books...");
     const books = await Books.find();
     res.status(200).json(books);
   } catch (error) {
@@ -96,4 +97,4 @@ const getPosts = async (req, res) => {
   res.json(updatePost);
 };
 
-module.exports = {getPosts,getPost,getSinglePost,createPost,updatePost,deletePost,likePost}
+module.exports = {getBooks,getPost,getSinglePost,createPost,updatePost,deletePost,likePost}
