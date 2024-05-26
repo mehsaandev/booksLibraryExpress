@@ -13,10 +13,22 @@ const userSchema = mongoose.Schema({
     type: String,
     required: true,
   },
-  publicationYear: {
+  image:{
+    type: String,
+  },
+  genre: {
     type: String,
     required: true,
-  }
+  },
+  publication_year: {
+    type: String,
+    required: true,
+  },
+  favorites: {
+    type: [String],
+    default: [],
+  },
+  
 });
 
 // export default 

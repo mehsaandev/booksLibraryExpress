@@ -11,6 +11,10 @@ const booksRoutes = require('./routes/booksRoutes')
 
 // Middlewares
 app.use(express.json());
+
+app.use(bodyParser.urlencoded({   
+  extended: true
+})); 
 app.use(bodyParser.json({ limit: "50mb", extended: true }));
 app.use(bodyParser.urlencoded({ limit: "100mb", extended: true, parameterLimit: 50000 }))
 app.use(cors());
